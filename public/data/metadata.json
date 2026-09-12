@@ -1,0 +1,15 @@
+{
+  "datasetName": "食品営業許可施設",
+  "provider": "富山市",
+  "datasetUrl": "https://opdt.city.toyama.lg.jp/dataset/seikatsu-eisei01",
+  "sourceFileUrl": "https://opdt.city.toyama.lg.jp/dataset/fb1198c6-3ac2-42fc-ae99-81ea5ba09a2d/resource/fa38003f-accd-4690-b71b-96b1d78e1c45/download/syokuhin.xlsx",
+  "license": "CC-BY-4.0",
+  "downloadedAt": "2026-09-12T12:35:47.884Z",
+  "generatedAt": "2026-09-12T12:35:47.884Z",
+  "dataVersion": "ccb5a3c45013",
+  "recordCount": 5616,
+  "validPermitDateCount": 5616,
+  "invalidPermitDateCount": 0,
+  "sourceFileHash": "ccb5a3c450137acec55499b2c1197b0b88cc027b22f225a6c23735f5a52dcd8a",
+  "schemaVersion": "1.0.0"
+}

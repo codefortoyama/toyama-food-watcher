@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "businessType": "飲食店営業",
+    "subCategory": "一般食堂",
+    "facilityName": "富山食堂",
+    "address": "富山市新桜町7-38",
+    "buildingName": "市役所ビル1F",
+    "operatorName": "富山太郎",
+    "permitNumber": "富保第123号",
+    "permitDate": "2024-01-01",
+    "expirationDate": "2030-12-31",
+    "sourceRowNumber": 2,
+    "searchText": "飲食店営業 一般食堂 富山食堂 富山市新桜町7-38 市役所ビル1f 富山太郎 富保第123号"
+  },
+  {
+    "id": "2",
+    "businessType": "菓子製造業",
+    "subCategory": "和菓子",
+    "facilityName": "越中屋",
+    "address": "富山市総曲輪3-1-1",
+    "buildingName": "",
+    "operatorName": "越中次郎",
+    "permitNumber": "富保第124号",
+    "permitDate": "2024-02-01",
+    "expirationDate": "2030-01-31",
+    "sourceRowNumber": 3,
+    "searchText": "菓子製造業 和菓子 越中屋 富山市総曲輪3-1-1 越中次郎 富保第124号"
+  }
+]

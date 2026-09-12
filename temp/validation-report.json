@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "errors": [],
+  "warnings": [],
+  "metrics": {
+    "recordCount": 5616,
+    "uniqueIdCount": 5616,
+    "invalidDateCount": 0,
+    "diffFromPrevious": 0
+  }
+}

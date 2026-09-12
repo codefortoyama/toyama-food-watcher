@@ -1,0 +1,46 @@
+name: Update Data
+
+on:
+  schedule:
+    # 毎週日曜日の 00:00 UTC (日本時間 09:00) に実行
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+      - run: npm ci
+      - name: Run data update script
+        run: npm run data:update
+      - name: Validate data
+        run: npm run data:validate
+      - name: Run unit tests
+        run: npm run test:unit
+      - name: Check for changes
+        id: git-check
+        run: |
+          git status
+          git diff --quiet || echo "changed=true" >> $GITHUB_OUTPUT
+      - name: Create Pull Request
+        if: steps.git-check.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'data: update food permit data'
+          title: 'Data Update: New Permit Data'
+          body: |
+            Automated data update.
+            Please review the diff in `public/data/diff.json`.
+          branch: data-update
+          delete-branch: true
