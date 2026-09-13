@@ -63,7 +63,11 @@ const App: React.FC = () => {
             </a>
           </p>
           <p>
-            &copy; 2026 <a href="https://www.evolinq.link" target="_blank" rel="noopener noreferrer">株式会社EvoLiNQ</a> / Code for Toyama / <Link to="/about">データについて</Link>
+            &copy; 2026{' '}
+            <a href="https://www.evolinq.link" target="_blank" rel="noopener noreferrer">
+              株式会社EvoLiNQ
+            </a>{' '}
+            / Code for Toyama / <Link to="/about">データについて</Link>
           </p>
         </div>
       </footer>
