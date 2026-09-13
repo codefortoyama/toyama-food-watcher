@@ -3,6 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as crypto from 'crypto';
 import * as XLSX from 'xlsx';
+import { JSDOM } from 'jsdom';
 import { transformSheet } from './transform-data';
 import { validateData } from './validate-data';
 import { generateDiff } from './generate-diff';
@@ -35,8 +36,33 @@ async function downloadFile(url: string, dest: string) {
 }
 
 async function getXlsxUrl(): Promise<string> {
-  // 2026/09/12 時点の最新URL
-  return 'https://opdt.city.toyama.lg.jp/dataset/fb1198c6-3ac2-42fc-ae99-81ea5ba09a2d/resource/fa38003f-accd-4690-b71b-96b1d78e1c45/download/syokuhin.xlsx';
+  console.log(`Fetching dataset page: ${SOURCE_URL}`);
+  const response = await axios.get(SOURCE_URL);
+  const dom = new JSDOM(response.data);
+  const document = dom.window.document;
+
+  // Look for download links
+  const links = Array.from(document.querySelectorAll('a'));
+  const xlsxLink = links.find((a) => a.href && a.href.endsWith('.xlsx'));
+
+  if (!xlsxLink) {
+    // Fallback search in resource list
+    const resources = Array.from(document.querySelectorAll('.resource-item'));
+    for (const res of resources) {
+      if (res.textContent?.includes('XLSX')) {
+        const downloadBtn = res.querySelector('a[href$=".xlsx"]');
+        if (downloadBtn) return (downloadBtn as HTMLAnchorElement).href;
+      }
+    }
+    
+    // Last resort: search for any link containing "download" and "syokuhin.xlsx"
+    const syokuhinLink = links.find(a => a.href && a.href.includes('download') && a.href.includes('syokuhin.xlsx'));
+    if (syokuhinLink) return syokuhinLink.href;
+
+    throw new Error('Could not find XLSX download link on the dataset page');
+  }
+
+  return xlsxLink.href;
 }
 
 async function main() {
