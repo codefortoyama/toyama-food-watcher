@@ -73,7 +73,7 @@ const TopPage: React.FC = () => {
   return (
     <div className="top-page">
       <section className="card" style={{ textAlign: 'center', padding: '2rem 1rem' }}>
-        <h2>富山市 新規営業許可施設ウォッチャー</h2>
+        <h2>富山市食品営業許可申請ビューア</h2>
         <p>富山市のオープンデータを利用し、最近新たに営業許可を受けた施設をチェックできます。</p>
         <div style={{ marginTop: '1.5rem' }}>
           <Link to="/list">

@@ -15,7 +15,7 @@ const App: React.FC = () => {
         <div className="container">
           <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <h1 style={{ margin: 0, fontSize: '1.25rem' }}>
-              <Link to="/">富山営業許可施設ウォッチャー</Link>
+              <Link to="/">富山市食品営業許可申請ビューア</Link>
             </h1>
             <ul style={{ display: 'flex', listStyle: 'none', margin: 0, padding: 0, gap: '1rem' }}>
               <li>
