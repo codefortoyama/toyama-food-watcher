@@ -50,6 +50,28 @@ const AboutPage: React.FC = () => {
       </section>
 
       <section className="card">
+        <h3>関連プロジェクト</h3>
+        <p>
+          Code for Toyama では、富山市のオープンデータを活用した他のビューアも公開しています。
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://codefortoyama.github.io/school/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              富山市小中学校アナライザー — 人口250mメッシュで校区と人口を比較
+            </a>
+            <br />
+            <span style={{ fontSize: '0.85rem', color: 'var(--text-light)' }}>
+              250mメッシュ人口・世帯データと小中学校区境界を地図上で重ねて表示。学校再編を考えるためのビューア（CC BY）。
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <section className="card">
         <h3>免責事項</h3>
         <p>
           本サイトに掲載されている情報は、富山市のオープンデータに基づいています。

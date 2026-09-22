@@ -17,7 +17,7 @@ const App: React.FC = () => {
             <h1 style={{ margin: 0, fontSize: '1.25rem' }}>
               <Link to="/">富山市食品営業許可申請ビューア</Link>
             </h1>
-            <ul style={{ display: 'flex', listStyle: 'none', margin: 0, padding: 0, gap: '1rem' }}>
+            <ul style={{ display: 'flex', listStyle: 'none', margin: 0, padding: 0, gap: '1rem', alignItems: 'center' }}>
               <li>
                 <Link to="/list">探す</Link>
               </li>
@@ -29,6 +29,22 @@ const App: React.FC = () => {
               </li>
               <li>
                 <Link to="/favorites">★</Link>
+              </li>
+              <li>
+                <a
+                  href="https://codefortoyama.github.io/school/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    fontSize: '0.85rem',
+                    border: '1px solid var(--primary)',
+                    borderRadius: '9999px',
+                    padding: '0.2rem 0.6rem',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  🏫 小中学校アナライザー
+                </a>
               </li>
             </ul>
           </nav>
@@ -60,6 +76,16 @@ const App: React.FC = () => {
               rel="noopener noreferrer"
             >
               富山市 オープンデータ（食品営業許可施設）
+            </a>
+          </p>
+          <p>
+            姉妹プロジェクト：
+            <a
+              href="https://codefortoyama.github.io/school/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              🏫 富山市小中学校アナライザー — 人口250mメッシュで校区と人口を比較
             </a>
           </p>
           <p>

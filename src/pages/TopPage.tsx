@@ -149,6 +149,30 @@ const TopPage: React.FC = () => {
           <Link to="/list">もっと見る</Link>
         </div>
       </section>
+
+      <section
+        className="card"
+        style={{
+          borderLeft: '4px solid var(--primary)',
+          background: 'linear-gradient(135deg, #e0f2f1 0%, #ffffff 100%)',
+        }}
+      >
+        <h3 style={{ margin: '0 0 0.5rem', color: 'var(--primary-dark)' }}>
+          🏫 姉妹プロジェクト: 富山市小中学校アナライザー
+        </h3>
+        <p style={{ margin: '0 0 0.75rem', fontSize: '0.95rem' }}>
+          人口250mメッシュと小・中学校区を重ねて、校区と人口分布を地図で比較・分析できるビューアです。
+          学校再編を考えるための Code for Toyama 製オープンデータプロジェクト。
+        </p>
+        <a
+          href="https://codefortoyama.github.io/school/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ fontWeight: 'bold' }}
+        >
+          小中学校アナライザーを見る →
+        </a>
+      </section>
     </div>
   );
 };
