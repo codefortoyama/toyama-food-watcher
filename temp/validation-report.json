@@ -3,9 +3,9 @@
   "errors": [],
   "warnings": [],
   "metrics": {
-    "recordCount": 5616,
-    "uniqueIdCount": 5616,
+    "recordCount": 5620,
+    "uniqueIdCount": 5620,
     "invalidDateCount": 0,
-    "diffFromPrevious": 0
+    "diffFromPrevious": 4
   }
 }
